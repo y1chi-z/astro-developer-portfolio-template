@@ -2,25 +2,25 @@
 import '../styles/global.scss';
 
 // Base domain URL without trailing slash
-const domainBaseURL = 'https://devidev.io';
-const ogImageUrl    = 'https://devidev.io/img/meta.png';
+const domainBaseURL = 'https://essiezhang.io';
+const ogImageUrl    = 'https://essiezhang.io/img/meta.png';
 
 // Website publisher & region
-const authorPublisher   = 'Dejan Vi.';
-const geoRegion         = 'DE-BY';
+const authorPublisher   = 'Essie Zhang';
+const geoRegion         = 'CA-BC';
 
 // SEO title, description and keywords
-const seoTitle          = 'devi|dev|io | Dejan Vi. | Full Stack Developer';
-const seoDescription    = 'Passionate web developer focused on creating clean, efficient, and scalable web applications with a modern tech stack. Specialized in Angular, TypeScript, and Supabase.';
-const seoKeywords       = 'Full Stack Developer, Dejan Vi, Munich, Papersend, Qivi, TECHPOINT, Angular, Typescript, Supabase';
+const seoTitle          = 'Essie Zhang | Data Scientist | Medical Imaging | Portfolio';
+const seoDescription    = 'Essie Zhang is a data scientist with a strong background in medical imaging, deep learning, and scientific visualization. She is passionate about building reproducible and impactful tools for healthcare and research.';
+const seoKeywords       = 'Essie Zhang, Data Scientist, Medical Imaging, Deep Learning, Scientific Computing, Dashboards, Reproducible Research, Canada, UBC';
 
 // Twitter card data
 const twitter = {
     title:          seoTitle,
     description:    seoDescription,
     image:          ogImageUrl,
-    site:           '@devidev_io',
-    creator:        '@devidev_io'
+    site:           '@essiezhang',         // change if you have Twitter
+    creator:        '@essiezhang'
 };
 
 // Open graph data
@@ -30,22 +30,21 @@ const openGraph = {
     url:            domainBaseURL,
     image:          ogImageUrl,
     type:           'website',
-    locale:         'en_US',
-    siteName:       'devi|dev|io'
+    locale:         'en_CA',
+    siteName:       'Essie Zhang Portfolio'
 };
 
 // Dublin core
 const dublinCore = {
-    title:          'devi|dev|io',
+    title:          'Essie Zhang Portfolio',
     creator:        authorPublisher,
     publisher:      authorPublisher,
     rights:         authorPublisher,
     description:    seoDescription,
     language:       'en',
-    type:           'Software',
+    type:           'Professional Profile',
     format:         'text/html'
 };
-
 ---
 
 <!doctype html>

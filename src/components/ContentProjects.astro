@@ -10,30 +10,47 @@ interface Project {
     };
 };
 
-const projects: Project[] = [{
-    name: 'Papersend.io',
-    description: 'Papersend is the free alternative to DocSend for secure document sharing, tracking, and Data Rooms. Customize branding, control access, and protect your documents.',
-    link: {
-        url: 'https://papersend.io/',
+const projects: Project[] = [
+    {
+        name: 'Anatomical Segmentation Dashboard',
+        description: 'A clinical web dashboard integrating TotalSegmentator for anatomical segmentation of CT scans. Includes 3D preview and STL export for surgical planning.',
+        link: {
+            url: 'https://github.com/bcch-digital-team/capstone-2025-mds-v',
+            title: 'Anatomical Segmentation Dashboard',
+            buttonLabel: 'View on GitHub'
+        }
+    },
+    {
+        name: 'UBC Medicine Datathon – Chest X-ray Classifier',
+        description: '🏆 First-place winner at UBC Medicine Datathon 2025. Built a CNN pipeline with PyTorch and DenseNet for classifying chest X-rays. Included explainability via Grad-CAM.',
+        link: {
+            url: 'https://github.com/y1chi-z/datathon_team6',
+            title: 'UBC Datathon Chest X-ray',
+            buttonLabel: 'View Project'
+        }
+    },
+    {
+        name: 'DataMop: EDA Toolkit',
+        description: 'A lightweight Python package for automated exploratory data analysis. Detects missing values, generates profiling summaries, and supports visual checks.',
+        link: {
+            url: 'https://github.com/y1chi-z/DataMop_package_group14',
+            title: 'DataMop EDA Toolkit',
+            buttonLabel: 'See Toolkit'
+        }
+    },
+    {
+        name: 'VDash: Vehicle Trends Dashboard',
+        description: 'An interactive dashboard for visualizing vehicle data trends across makes and regions using Dash and Plotly. Enables deep dives via dropdown filtering.',
+        link: {
+            url: 'https://github.com/y1chi-z/DSCI-532_2025_4_vdash',
+            title: 'VDash Vehicle Dashboard',
+            buttonLabel: 'View Dashboard'
+        }
     }
-}, {
-    name: 'Qivi.io',
-    description: 'Qivi is an all-in-one application designed to streamline business operations, enhance productivity, and maximize success. Data security is a priority.',
-    link: {
-        url: 'https://qivi.io/'
-    }
-}, {
-    name: 'TECHPOINT.de',
-    description: 'TECHPOINT is a local IT service provider based in the Starnberg district and the Fünfseenland region, specializing in delivering reliable and modern IT solutions.',
-    link: {
-        url: 'https://techpoint.de/'
-    }
-}];
+];
 ---
 
 <div>
-
-    <!-- <h2 class="text-2xl font-bold text-white mb-4">Latest Projects</h2> -->
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -57,9 +74,7 @@ const projects: Project[] = [{
                             target={project.link.target || '_blank'}
                             class="
                                 w-full px-4 py-2.5 mt-4 text-center
-
                                 border border-gray-600 rounded-lg
-
                                 hover:text-primary
                                 hover:border-primary
                             ">

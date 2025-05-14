@@ -10,59 +10,50 @@ const code = `interface Developer {
 interface TechStack {
     devOps: string[];
     backend: string[];
-   frontend: string[];
+    frontend: string[];
 };
 
-type ContactType = 'github' | 'twitter' | 'linkedIn' | 'xing' | 'email';
+type ContactType = 'github' | 'linkedIn' | 'email';
 
 const techStack: TechStack = {
     devOps: [
-        'GitLab',
         'GitHub',
-        'Cloudflare',
-        'Docker'
+        'Docker',
+        'CI/CD',
+        'GCP',
+        'AWS'
     ],
     frontend: [
-        'Angular',
-        'JavaScript',
-        'TypeScript',
-        'TailwindCSS',
-        'PrimeNG',
-        'Astro',
-        'Ionic',
-        'Stencil',
-        'Capacitor',
-        'SCSS',
-        'Markdown',
-        'WordPress'
+        'Dash',
+        'Shiny',
+        'Markdown'
     ],
     backend: [
-        'Supabase',
-        'Node.js',
-        'Bun',
-        'Deno',
+        'Python',
+        'R',
+        'PyTorch',
+        'NumPy',
+        'Pandas',
         'PostgreSQL',
-        'MySQL',
-        'S3 Storage',
-        'Resend'
+        'Bash'
     ]
 };
 
 // Developer profile
 const me: Developer = {
-    name: 'Dejan Vi.',
+    name: 'Essie Zhang',
     skills: [
         ...techStack.devOps,
         ...techStack.backend,
         ...techStack.frontend
     ],
     interests: [
-        'Open Source',
-        'Security',
-        'Privacy',
-        'Performance',
-        'Self-Hosting',
-        'Networking'
+        'Medical Imaging',
+        'Reproducible Research',
+        'Deep Learning',
+        'Data Storytelling',
+        'Human-Centered AI',
+        'Scientific Visualization'
     ]
 };
 
@@ -70,20 +61,15 @@ const me: Developer = {
 const contact = (type: ContactType): string => {
     switch (type) {
         case 'github':
-            return 'https://github.com/devidevio';
-        case 'twitter':
-            return 'https://x.com/devidev_io';
+            return 'https://github.com/y1chi-z';
         case 'linkedIn':
-            return 'https://www.linkedin.com/in/dejan-vi';
-        case 'xing':
-            return 'https://www.xing.com/profile/Dejan_Vintonjiv';
+            return 'https://www.linkedin.com/in/yichi-z/';
         case 'email':
-            return 'hi@devidev.io';
+            return 'zhangyichi0306@gmail.com';
         default:
             return 'Send fax.';
     }
 };
-
 `;
 ---
 
@@ -94,26 +80,20 @@ const contact = (type: ContactType): string => {
 />
 
 <style is:global>
-
-    /* Custom styling for code block line numbers */
     pre.astro-code {
         @apply bg-transparent !important;
     }
-
     pre.astro-code code {
         @apply block;
         counter-reset: step;
         counter-increment: step 0;
     }
-
     pre.astro-code code .line {
         @apply relative;
     }
-
     pre.astro-code code .line::before {
         content: counter(step);
         counter-increment: step;
         @apply text-gray-600 pr-2;
     }
-
 </style>
